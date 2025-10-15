@@ -2,15 +2,32 @@
 /*
 Plugin Name: Bonsai Digital Maintenance Mode
 Description: Displays a customisable maintenance mode page for non-logged-in users, and can replace the standard WordPress maintenance screen.
-Version: 1.11
+Version: 1.12
 Author: Ben Ervine / The Bonsai Digital Collective
 Text Domain: bonsai-maintenance
+Update URI: https://thebonsai.digital/bonsai-maintenance
 */
 
+// Exit if accessed directly
 if (!defined('ABSPATH')) {
  exit;
 }
 
+// Include the update checker library
+require __DIR__ . '/includes/plugin-update-checker/plugin-update-checker.php';
+
+// Set up the updater
+$updateChecker = Puc_v4_Factory::buildUpdateChecker(
+ 'https://github.com/The-Bonsai-Digital-Collective/bonsai-maintenance',
+ __FILE__,
+ 'bonsai-maintenance'
+);
+
+// If you’re using “main” as your default GitHub branch
+$updateChecker->setBranch('main');
+
+// If you attach ZIPs to GitHub releases, uncomment this line:
+// $updateChecker->getVcsApi()->enableReleaseAssets();
 /*
 |--------------------------------------------------------------------------
 | Bootstrap (i18n)

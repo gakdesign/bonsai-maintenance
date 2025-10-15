@@ -40,6 +40,9 @@ A lightweight WordPress plugin that displays a customisable maintenance page to 
 
 ## Changelog
 
+### 1.12 
+- Adding Wordpress plugin update functionality
+
 ### 1.11
 - Toggle **Show Main Content** (background-only mode).  
 - SEO: **Page Title** + **Meta Description** options.  

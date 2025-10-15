@@ -91,6 +91,9 @@ Bonsai Digital Maintenance Mode shows a friendly, customisable maintenance page 
 
 == Changelog ==
 
+= 1.12 =
+* Adding Wordpress plugin update functionality
+
 = 1.11 =
 * Add toggle to show/hide main content (background-only mode).
 * Add SEO options: page title + meta description.
