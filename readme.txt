@@ -91,6 +91,9 @@ Bonsai Digital Maintenance Mode shows a friendly, customisable maintenance page 
 
 == Changelog ==
 
+= 1.13  =
+* Change of ownership
+
 = 1.12 =
 * Adding Wordpress plugin update functionality
 

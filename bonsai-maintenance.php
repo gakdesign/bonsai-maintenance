@@ -2,7 +2,7 @@
 /*
 Plugin Name: Bonsai Digital Maintenance Mode
 Description: Displays a customisable maintenance mode page for non-logged-in users, and can replace the standard WordPress maintenance screen.
-Version: 1.12
+Version: 1.13
 Author: Ben Ervine / The Bonsai Digital Collective
 Text Domain: bonsai-maintenance
 Update URI: https://thebonsai.digital/bonsai-maintenance

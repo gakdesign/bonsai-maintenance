@@ -40,6 +40,9 @@ A lightweight WordPress plugin that displays a customisable maintenance page to 
 
 ## Changelog
 
+### 1.13 
+- Change of ownership
+
 ### 1.12 
 - Adding Wordpress plugin update functionality
 
