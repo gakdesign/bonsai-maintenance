@@ -13,21 +13,29 @@ if (!defined('ABSPATH')) {
  exit;
 }
 
-// Include the update checker library
-require __DIR__ . '/includes/plugin-update-checker/plugin-update-checker.php';
+// 1) Load the library (path must match your folder structure)
+require_once __DIR__ . '/includes/plugin-update-checker/plugin-update-checker.php';
 
-// Set up the updater
-$updateChecker = Puc_v4_Factory::buildUpdateChecker(
- 'https://github.com/The-Bonsai-Digital-Collective/bonsai-maintenance',
- __FILE__,
- 'bonsai-maintenance'
+// 2) Import the v5 factory (major version alias to the latest installed minor, e.g. v5p6)
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+// 3) Build the update checker
+$updateChecker = PucFactory::buildUpdateChecker(
+ 'https://github.com/gakdesign/bonsai-maintenance', // your repo URL
+ __FILE__,                                                              // main plugin file
+ 'bonsai-maintenance'                                                   // plugin slug = folder name
 );
 
-// If you’re using “main” as your default GitHub branch
+// Default branch (change if not "main")
 $updateChecker->setBranch('main');
 
-// If you attach ZIPs to GitHub releases, uncomment this line:
+// If you attach built ZIPs to GitHub Releases, uncomment this:
 // $updateChecker->getVcsApi()->enableReleaseAssets();
+
+// If the repo is private, set a token with repo read access:
+// $updateChecker->setAuthentication('ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+
+
 /*
 |--------------------------------------------------------------------------
 | Bootstrap (i18n)
