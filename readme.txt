@@ -91,6 +91,9 @@ Bonsai Digital Maintenance Mode shows a friendly, customisable maintenance page 
 
 == Changelog ==
 
+= 1.14 = 
+* Set to autocheck for updates every 6 hours
+
 = 1.13  =
 * Change of ownership
 

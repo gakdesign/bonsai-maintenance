@@ -29,6 +29,9 @@ $updateChecker = PucFactory::buildUpdateChecker(
 // Default branch (change if not "main")
 $updateChecker->setBranch('main');
 
+// After you create $updateChecker…
+$updateChecker->setUpdateCheckInterval(6); // hours (avoid going too low to prevent API rate limits)
+
 // If you attach built ZIPs to GitHub Releases, uncomment this:
 // $updateChecker->getVcsApi()->enableReleaseAssets();
 
